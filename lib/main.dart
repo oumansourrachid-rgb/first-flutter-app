@@ -6,31 +6,48 @@ void main() {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Leçon 2"),
+          title: Text("Leçon 3"),
           centerTitle: true,
-          backgroundColor: Colors.grey,
+          backgroundColor: Colors.grey.shade100,
         ),
-        body: const Center(
+        body: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
             children: [
-              Text("Première ligne"),
-              Text("Deuxième ligne"),
-              Text("Troisième ligne"),
-              Text("Quatrième ligne"),
-              SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [Icon(Icons.star), Text("Bonjour"), Icon(Icons.star)],
+              Container(
+                width: 350,
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: Colors.blue.shade100,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Icon(Icons.person, size: 48),
+                    const SizedBox(height: 8),
+                    const Text("Rachid Oumansour"),
+                    const Text("Apprenant Flutter"),
+                  ],
+                ),
               ),
-              SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.home),
-                  Icon(Icons.favorite),
-                  Icon(Icons.settings),
-                ],
+              const SizedBox(height: 16),
+              Container(
+                width: 350,
+                padding: EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: Colors.green.shade100,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Icon(Icons.person, size: 48),
+                    const SizedBox(height: 8),
+                    const Text("Sara Salhi"),
+                    const Text("Apprenant Node Js"),
+                  ],
+                ),
               ),
             ],
           ),
