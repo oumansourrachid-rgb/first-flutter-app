@@ -6,7 +6,7 @@ void main() {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Leçon 3"),
+          title: const Text("Leçon 3"),
           centerTitle: true,
           backgroundColor: Colors.grey.shade100,
         ),
@@ -17,35 +17,37 @@ void main() {
               Container(
                 width: 350,
                 padding: const EdgeInsets.all(16),
+                margin: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
                   color: Colors.blue.shade100,
                   borderRadius: BorderRadius.circular(12),
                 ),
-                child: Column(
+                child: const Column(
                   mainAxisSize: MainAxisSize.min,
+
                   children: [
-                    const Icon(Icons.person, size: 48),
-                    const SizedBox(height: 8),
-                    const Text("Rachid Oumansour"),
-                    const Text("Apprenant Flutter"),
+                    Icon(Icons.person, size: 48),
+                    SizedBox(height: 8),
+                    Text("Rachid Oumansour"),
+                    Text("Apprenant Flutter"),
                   ],
                 ),
               ),
-              const SizedBox(height: 16),
               Container(
                 width: 350,
-                padding: EdgeInsets.all(16),
+                margin: const EdgeInsets.all(8),
+                padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
                   color: Colors.green.shade100,
                   borderRadius: BorderRadius.circular(12),
                 ),
-                child: Column(
+                child: const Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    const Icon(Icons.person, size: 48),
-                    const SizedBox(height: 8),
-                    const Text("Sara Salhi"),
-                    const Text("Apprenant Node Js"),
+                    Icon(Icons.person, size: 48),
+                    SizedBox(height: 8),
+                    Text("Sara Salhi"),
+                    Text("Apprenant Node Js"),
                   ],
                 ),
               ),
