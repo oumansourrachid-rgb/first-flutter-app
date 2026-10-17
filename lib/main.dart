@@ -1,39 +1,45 @@
 import 'package:flutter/material.dart';
 
-const List<String> students = [
-  "Rachid",
-  "Sara",
-  "Youssef",
-  "Salma",
-  "Omar",
-  "Nadia",
-  "Karim",
-  "Imane",
-  "Hamza",
-  "Meryem",
-  "Mohcine",
-  "Hajar",
-  "Majda",
-];
+const TextStyle sectionTitleStyle = TextStyle(
+  fontSize: 20,
+  fontWeight: FontWeight.bold,
+);
+
 void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('ListView.Builder'),
+          title: const Text("Leçon 5 : images"),
           centerTitle: true,
-          backgroundColor: Colors.grey.shade100,
         ),
-        body: ListView.builder(
-          itemCount: students.length,
-          itemBuilder: (context, index) {
-            return ListTile(
-              leading: Icon(Icons.person),
-              title: Text(students[index]),
-              subtitle: Text("Apprenant Flutter"),
-            );
-          },
+        body: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              // 1) Image.asset
+              const Text("Image.asset", style: sectionTitleStyle),
+              const Text("Widget qui affiche l'image complète"),
+              const SizedBox(height: 8),
+              Image.asset(
+                "assets/images/logo_flutter.webp",
+                width: 150,
+                height: 150,
+                fit: BoxFit.contain,
+              ),
+              const SizedBox(height: 32),
+
+              // 2) CircleAvatar
+              const Text("CircleAvatar", style: sectionTitleStyle),
+              const Text("Image ronde, idéale pour un profil"),
+              const SizedBox(height: 8),
+              const CircleAvatar(
+                radius: 60,
+                backgroundImage: AssetImage("assets/images/logo_lion.webp"),
+              ),
+            ],
+          ),
         ),
       ),
     ),
